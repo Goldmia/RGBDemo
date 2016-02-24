@@ -13,6 +13,7 @@
 		A2AE26421C7DECB500032B3C /* Curry.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A2AE26411C7DECB500032B3C /* Curry.framework */; };
 		A2AE26441C7DECC000032B3C /* Nimble.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A2AE26431C7DECC000032B3C /* Nimble.framework */; };
 		A2AE26461C7DECC700032B3C /* Quick.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A2AE26451C7DECC700032B3C /* Quick.framework */; };
+		A2AE264B1C7DFA3B00032B3C /* RGB.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2AE264A1C7DFA3B00032B3C /* RGB.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,6 +36,7 @@
 		A2AE26411C7DECB500032B3C /* Curry.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Curry.framework; path = "Carthage/Checkouts/Curry/build/Debug-iphoneos/Curry.framework"; sourceTree = "<group>"; };
 		A2AE26431C7DECC000032B3C /* Nimble.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Nimble.framework; path = "Carthage/Checkouts/Nimble/build/Debug-iphoneos/Nimble.framework"; sourceTree = "<group>"; };
 		A2AE26451C7DECC700032B3C /* Quick.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Quick.framework; path = "Carthage/Checkouts/Quick/build/Debug-iphoneos/Quick.framework"; sourceTree = "<group>"; };
+		A2AE264A1C7DFA3B00032B3C /* RGB.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RGB.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,6 +85,7 @@
 			children = (
 				A2AE262A1C7DEA1900032B3C /* RGB.h */,
 				A2AE262C1C7DEA1900032B3C /* Info.plist */,
+				A2AE264A1C7DFA3B00032B3C /* RGB.swift */,
 			);
 			path = RGB;
 			sourceTree = "<group>";
@@ -214,6 +217,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A2AE264B1C7DFA3B00032B3C /* RGB.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -328,6 +332,7 @@
 		A2AE263C1C7DEA1900032B3C /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
@@ -339,12 +344,14 @@
 				PRODUCT_BUNDLE_IDENTIFIER = Kindin.RGB;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
 		A2AE263D1C7DEA1900032B3C /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
@@ -362,11 +369,7 @@
 		A2AE263F1C7DEA1900032B3C /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)/Carthage/Checkouts/Nimble/build/Debug-iphoneos",
-					"$(PROJECT_DIR)/Carthage/Checkouts/Quick/build/Debug-iphoneos",
-				);
+				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = RGBTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = Kindin.RGBTests;
@@ -377,11 +380,7 @@
 		A2AE26401C7DEA1900032B3C /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)/Carthage/Checkouts/Nimble/build/Debug-iphoneos",
-					"$(PROJECT_DIR)/Carthage/Checkouts/Quick/build/Debug-iphoneos",
-				);
+				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = RGBTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = Kindin.RGBTests;
